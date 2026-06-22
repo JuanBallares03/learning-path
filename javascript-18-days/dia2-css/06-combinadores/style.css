@@ -1,0 +1,33 @@
+/* 1) Combinador descendiente
+   Selecciona TODOS los <p> que estén dentro de un <div>,
+   sin importar si son hijos directos o nietos. */
+div p {
+  color: red; /* Pinta el texto de esos párrafos en rojo */
+}
+
+/* 2) Combinador de hijo directo
+   Selecciona SOLO los <li> que son hijos inmediatos de un <ol>.
+   No afecta a los <li> que estén dentro de sublistas (<ul> dentro de <li>). */
+ol > li {
+  font-weight: bolder; /* Pone en negrita fuerte esos ítems de lista */
+}
+
+/* 3) Combinador de hermanos generales
+   Selecciona TODOS los <h3> que aparecen después de un <h2>
+   y que comparten el mismo padre en el HTML. */
+h2 ~ h3 {
+  background-color: lightskyblue; /* Les pone fondo celeste */
+}
+
+/* 4) Selector por atributo
+   Selecciona los <p> que tengan el atributo align="left".
+   Nota: el atributo align está obsoleto en HTML5, lo moderno es usar text-align en CSS.
+   Este ejemplo sirve para practicar selectores por atributo. */
+p[align="left"] {
+  background-color: gold; /* Les pone fondo dorado */
+}
+
+/* 5) Combinador adyacente. Lo que hace es aplicar estilo a un elemento que está justo después de otro elemento hermano */
+h3 + h2{
+  color: green;
+}

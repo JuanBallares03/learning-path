@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modificar el objeto</title>
+  </head>
+  <body>
+    
+    <script>
+        let gato = {
+            nombre:"Lucky",
+            raza: "Comun Europeo",
+            edad: 1,
+
+            maullar(){
+                console.log("Miau");
+            },
+
+            saludar(){
+              console.log("Hola me llamo "+ this.nombre);
+            }
+        };
+        let gato1 = {
+            nombre:"Cloe",
+            raza: "Comun Europeo",
+            edad: 5,
+          
+            maullar(){
+                console.log("Miau");
+            },
+
+            saludar(){
+              console.log("Hola me llamo "+ this.nombre);
+            }
+        };
+        
+
+
+    </script>
+
+  </body>
+</html>

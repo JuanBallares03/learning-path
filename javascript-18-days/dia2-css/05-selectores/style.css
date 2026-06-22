@@ -1,0 +1,41 @@
+body{
+    background-color: lightgreen;
+}
+
+.principal{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#informacion{
+    text-align: center;
+    color: red;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: purple;
+}
+
+/* Un selector por atributo es aquel que se aplica a un elemento basado en su atributo. 
+Por ejemplo, a[href*=".edu"] selecciona todos los enlaces que contienen ".edu" en su href. */
+a[href*=".edu"]{
+    background-color: antiquewhite;
+}
+
+/* pseudo clase. Una clase es un selector que se aplica a un elemento cuando este cumple cierta condición, 
+como por ejemplo cuando el usuario hace clic en un botón o cuando el mouse pasa sobre un elemento. Esto depende de su estado,
+podriamos decir que es como un interruptor que cambia su estado normal a uno especial. 
+Como encender la luz y apagar seria su estado normal */
+
+h1:hover{
+    color:violet;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+/* pseudo elemento. */
+
+.principal::first-line{
+    background-color: lightblue;
+}
+
+

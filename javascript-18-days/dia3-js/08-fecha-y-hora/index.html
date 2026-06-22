@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <title>Temporizador</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+   <!-- el atributo onload ejecuta una funcion cuando la pagina termina de cargar osea cuando se entra a ella -->
+  <body onload="inicioReloj()">
+    <input type="number" id=ingresoUsuario>
+    <button onclick="comenzarTiempo()">Alarma</button>
+    <h1 id="valorAlarma">00:00:00</h1>
+
+    <audio id="audioAlarma">
+        <source src="audios/alarma-sonido.mp3" type="audio/mpeg">
+        Sonido no disponible
+    </audio>
+    
+    <script>
+        let elementoSegundos = document.getElementById("ingresoUsuario");
+        let textoAlarma = document.getElementById("valorAlarma");
+        let elementoAudio = document.getElementById("audioAlarma");
+
+
+        // lo que hace setTimeout es disparar una funcion despues de un tiempo determinado
+        function comenzarTiempo(){
+            setTimeout(tiempoCumplido, 1000 * elementoSegundos.value);
+        }
+        
+        function tiempoCumplido(){
+            textoAlarma.style.color = "green";
+            elementoAudio.play();
+        }
+        // en cambio setInterval llama a una funcion cada vez que se cumpla un determinado tiempo
+        function inicioReloj(){
+            setInterval(ticTac, 1000); 
+        }   
+
+        function ticTac(){
+            let tiempoActual = new Date();
+            let hora = String(tiempoActual.getHours()).padStart(2,"0");
+            let minutos = String(tiempoActual.getMinutes()).padStart(2,"0");
+            let segundos = String(tiempoActual.getSeconds()).padStart(2,"0");
+            // tiempoActual.toLocaleDateString('es-ES');
+            // alert(tiempoActual);
+            let textoHora = hora + ":" + minutos + ":" + segundos;
+            textoAlarma.textContent = textoHora;
+        }       
+    </script>
+
+  </body>
+</html>

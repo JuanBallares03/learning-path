@@ -1,0 +1,30 @@
+body{
+  background-image: url(./images/fondo.png);
+  background-size: cover;
+  background-position: center;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9; 
+}
+
+.fuente{
+    font-family: cursive;
+}
+
+.centrar{
+    display: flex;
+    justify-content: center;
+}
+

@@ -1,0 +1,46 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seccion para tienda de telefonos</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body onload="peticionMostrarDatos()">
+      
+
+  <table>
+    <thead>
+        <tr>
+          <th>id</th>
+          <th>marca</th>
+          <th>modelo</th>
+          <th>color</th>
+          <th>almacenamiento</th>
+          <th>procesador</th>
+        </tr>
+      </thead>
+      <tbody id="miTabla">
+      </tbody>
+  </table>
+  <br><br><br>
+
+  <input id="infoId" type="text" placeholder="Ingresa el ID">
+  <button onclick="generarPeticion()">Consultar</button>
+
+
+  <br><br><br>
+  <input id="infoMarca" type="text" placeholder="ingrese Marca"><br>
+  <input id="infoModelo" type="text" placeholder="ingrese Modelo"><br>
+  <input id="infoColor" type="text" placeholder="ingrese Color"><br>
+  <input id="infoAlmacenamiento" type="text" placeholder="ingrese Almacenamiento"><br>
+  <input id="infoProcesador" type="text" placeholder="ingrese Procesador"><br>
+  <button onclick="agregarRegistro()">Agregar</button>
+  <button onclick="modificarRegistro()">Modificar</button>
+  <button onclick="eliminarRegisto()">Eliminar</button><br><br>
+  <div id="mostrarInfoId"></div>
+
+
+  </body>
+  <script src="js/script.js"></script>
+</html>
+

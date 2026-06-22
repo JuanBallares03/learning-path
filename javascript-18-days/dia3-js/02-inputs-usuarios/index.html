@@ -1,0 +1,33 @@
+<html lang="en">
+  <head>
+    <title>Ingreso de los Usuarios</title>
+  </head>
+  <body>
+    <p>Ingresa tu nombre porfavor</p>
+
+    <!-- El input es un campo donde el usuario puede ingresar datos -->
+    <input type="text" id="nombreUsuario">
+    <!-- El atributo de evento onclick se ejecuta cuando el usuario hace click en el boton -->
+    <button onclick="saludarUsuario()">Saludar</button>
+
+
+
+
+
+    <script>
+            function saludarUsuario(){
+            // Una variable es un espacio o contenedor en la memoria donde se almacena un valor 
+            // que puede cambiar durante la ejecución de un programa.
+            
+            let nombre = document.getElementById("nombreUsuario"); // el value no necesariamente debe ir en la misma linea del getElementById
+            
+            // El document.getElementById nos permite obtener un elemento del HTML a partir de su ID y 
+            // con el value evitamos que nos devuelva el objeto completo y solo nos devuelva el valor que el usuario ingreso
+            //El alert muestra una ventana emergente con el mensaje que le pasemos
+            // El document es una referencia al HTML completo
+            alert("Hola " + nombre.value);
+        }
+    </script>
+
+  </body>
+</html>

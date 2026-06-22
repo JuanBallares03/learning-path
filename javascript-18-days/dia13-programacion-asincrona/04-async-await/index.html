@@ -1,0 +1,56 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async/Await</title>
+  </head>
+  <body>
+    <script>
+      "Ejemplo1";
+      // const obtenerDatos=()=>{
+      //     return fetch("https//api.datos.gob.mx/v1/precio.gasolina.publico")
+      //     .then(function(respuesta){
+      //         return respuesta.json();
+      //     })
+      //     .then(function(datos){
+      //         console.log(datos);
+      //     })
+      //     .catch(function(error){
+      //         console.error(error)
+      //     });
+      // }
+      // obtenerDatos();
+      // console.log("El codigo sigue");
+
+      "Ejemplo con asycn y await";
+
+      //   const obtenerDatos = async () => {
+      //     let respuesta = await fetch("https://jsonplaceholder.typicode.com/posts");
+
+      //     let datos = await respuesta.json();
+
+      //     console.log(datos);
+      //   };
+
+      //   obtenerDatos();
+      //   console.log("El codigo sigue");
+
+      "Ejemplo con diferentes peticiones a varias apis y esperar a que se complete todas las promesas";
+      
+      const obtenerTodo = async()=>{
+        console.log("Este codigo esta al comienzo");
+        let respuestaPrueba = await fetch("https://jsonplaceholder.typicode.com/posts");
+        let datosPrueba = await respuestaPrueba.json();
+
+        console.log("Este codigo esta al medio")
+        let respuestaPokemon = await fetch("https://pokeapi.co/api/v2/pokemon/ditto");
+        let datosPokemon = await respuestaPokemon.json();
+
+        console.log(datosPrueba,datosPokemon);
+        console.log("Este codigo esta al final");
+      }
+
+      obtenerTodo();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+body{
+    background-color: #8B0000;
+}
+
+h1{
+    color: #0a64c5;
+}
+
+p{
+    color: aliceblue;
+}
+
+.centrado{
+    text-align: center;
+}
+
+button{
+    padding: 10px 20px;
+    width: 200px;
+    border-radius: 8px;
+}
+
+.comedia:hover{
+    background-color: #FFD700;
+}
+
+.drama:hover{
+    background-color: #1E90FF;
+}
+
+.musical:hover{
+    background-color: #FF69B4;
+}
+
+.crimen:hover{
+    background-color: #8B0000;
+}

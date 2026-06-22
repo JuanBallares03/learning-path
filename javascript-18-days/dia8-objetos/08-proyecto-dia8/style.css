@@ -1,0 +1,16 @@
+label{
+    font-family: cursive;
+    font-size:  large;
+}
+
+button{
+    background-color: blue;
+    color: white;
+    width: 170px;
+    height: 40px;
+    margin: 2px;
+}
+
+.colorh1{
+    color: red;
+}

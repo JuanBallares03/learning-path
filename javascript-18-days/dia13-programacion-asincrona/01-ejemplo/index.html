@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sincronia y Asincronia</title>
+  </head>
+  <body>
+    
+    <script>
+        "Ejemplo codigo sincrono"
+        //Accion 1
+
+        console.log("Inicio del codigo sincronico");
+
+        //Accion 2
+
+        for(let i= 0; i<10; i++){
+            console.log(i);
+        }
+
+        //Accion 3
+
+        console.log("Fin del codigo sincrono")
+         
+        
+        "Ejemplo codigo asincrono"
+        //Accion 1
+
+        console.log("Inicio del codigo asincronico");
+
+        //Accion 2
+
+        setTimeout(function(){
+            for(let i= 0; i<10; i++){
+             console.log(i);
+            }
+
+        },0);
+
+        //Accion 3
+
+        console.log("Fin del codigo asincrono")
+
+    </script>
+
+  </body>
+</html>

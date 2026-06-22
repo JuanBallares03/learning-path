@@ -1,0 +1,32 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modificar el objeto</title>
+  </head>
+  <body>
+    
+    <script>
+        let gato = {
+            nombre:"Lucky",
+            raza: "Comun Europeo",
+            edad: 1,
+
+            maullar(){
+                console.log("Miau");
+            }
+        };
+        //Modificar el objeto
+        //Nombre del objeto.Propiedad = valor nuevo
+        function cumplirAnios(){
+          gato.edad = gato.edad+1
+        }
+
+        //Para crear un nuevo atributo
+        //Nombre del objeto[Nombre que se le va asignar]=valor
+        gato["peso"] = " 10 Kilos"
+
+    </script>
+
+  </body>
+</html>

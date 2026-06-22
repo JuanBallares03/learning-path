@@ -1,0 +1,23 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return</title>
+  </head>
+  <body>
+    <script>
+      function mostrarFecha() {
+        alert(obtenerFecha());
+      }
+
+      function obtenerFecha() {
+        // let fechaHoy = new Date().toLocaleDateString("es-ES");
+        let fechaHoy = new Date();
+        let fechaModificada = fechaHoy.toLocaleDateString("es-ES");
+        return fechaModificada;
+      }
+
+      // mostrarFecha();
+    </script>
+  </body>
+</html>

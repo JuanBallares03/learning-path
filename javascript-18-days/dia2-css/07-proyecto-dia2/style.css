@@ -1,0 +1,60 @@
+/* selector de tipo o elemento*/
+body{
+    background-color: rgba(227, 19, 227, 0.63);
+}
+/* selector de tipo o elemento*/
+p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: aliceblue;
+    text-align: center;
+}
+/* selector de tipo clase */
+.titulo{
+    color: blue;
+    font-family: cursive;
+}
+/* selector de tipo clase */
+.contenedor{
+    text-align: center; 
+}
+/* selector de tipo id */
+#resaltado{
+   color: yellow;
+}
+/* selector de tipo o elemento*/
+img {
+  width: 500px;   
+  height:500px;  
+  margin: 10px;   
+}
+
+
+/* pseudo clase */
+a:hover{
+    color: red;
+}
+
+/* por atributo */
+
+a[href="../index.html"]{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* pseudo elemento  */
+
+p::first-letter{
+    font-size: 200%;
+}
+
+/* combinador descendiente */
+div ol{
+    border: solid black 2px;
+}
+
+.decoracion{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.modificarfoto{
+    width: 32%;
+}

@@ -1,0 +1,24 @@
+body{
+    background-color: grey;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    font-family: 'Roboto',sans-serif;
+}
+
+#cuentaRegresivaReloj{
+    font-family: 'Orbitron',sans-serif;
+}
+
+h1{
+    font-family: 'Press Start 2P', cursive;
+}
+
+button:hover{
+    font-size: 20px;
+    color: #39FF14;
+}

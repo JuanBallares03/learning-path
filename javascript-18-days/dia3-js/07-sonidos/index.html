@@ -1,0 +1,39 @@
+<html lang="en">
+  <head>
+    <title>Temporizador</title>
+    <style>
+        audio::-webkit-media-controls-panel{
+            background-color: blueviolet;
+        }
+    </style>
+  </head>
+  <body>
+    <input type="number" id=ingresoUsuario>
+    <button onclick="comenzarTiempo()">Alarma</button>
+    <h1 style="color: red;" id="valorAlarma">APAGADO</h1>
+
+    <audio controls>
+        <source src="audios/alarma-sonido.mp3" type="audio/mpeg">
+        Sonido no disponible
+    </audio>
+    
+    <script>
+        let elementoSegundos = document.getElementById("ingresoUsuario");
+        let textoAlarma = document.getElementById("valorAlarma");
+        let elementoAudio = document.getElementById("audioAlarma");
+
+
+
+        function comenzarTiempo(){
+            setTimeout(tiempoCumplido, 1000 * elementoSegundos.value);
+        }
+        
+        function tiempoCumplido(){
+            textoAlarma.textContent = "ENCENDIDO";
+            textoAlarma.style.color = "green"
+            elementoAudio.play();
+        }
+    </script>
+
+  </body>
+</html>

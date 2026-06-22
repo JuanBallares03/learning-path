@@ -1,0 +1,33 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+  </head>
+  <body>
+    <p>Ingrese por favor un numero</p>
+    <input type="number" id="primerNumero">
+    <p>Por favor ingrese un segundo numero</p>
+    <input type="number" id="segundoNumero">
+    <br>
+    <button onclick="mostrarResultado()">Calcular</button>
+    <h2 id="mostrarTexto"></h2>
+    <script>
+      
+      function Sumar(numero1,numero2) {
+        // el mas lo que hace es tranformar esa variable si se puede en un numero 
+        // para que no lo concatene ya que por defecto lo ve como un texto
+        resultado = +numero1 + +numero2;
+        return resultado;
+      }
+
+      function mostrarResultado(){
+        let elementoNumero1 = document.getElementById("primerNumero");
+        let elementoNumero2 = document.getElementById("segundoNumero");
+        let textoResultado = document.getElementById("mostrarTexto");
+        let elementoSuma = Sumar(elementoNumero1.value,elementoNumero2.value);
+        textoResultado.textContent = elementoSuma;
+      }
+    </script>
+  </body>
+</html>

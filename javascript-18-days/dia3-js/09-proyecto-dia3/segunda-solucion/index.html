@@ -1,0 +1,77 @@
+<html lang="en">
+  <head>
+    <title>Proyecto dia 3</title>
+  </head>
+  <body onload="tiempoInicial()">
+    <h1>Hola bienvenidos y bienvenidas</h1>
+    <p>
+      Estas a punto de comenzar un minijuego, deber responder las preguntas
+      antes de que se acabe el tiempo.
+    </p>
+    <h2>Tiempo restante: <span id="cuentaRegresivaReloj">30</span></h2>
+    <audio src="../audios/game-over.mp3" id="audioCuentaRegresiva"></audio>
+
+    <ol>
+      <li>Cual es la capital de noruega?</li>
+      <input type="text" id="primeraPregunta" />
+      <li>Cual es la ciudad mas poblada del mundo?</li>
+      <input type="text" id="segundaPregunta" />
+      <li>En que año se descubrio america?</li>
+      <input type="text" id="terceraPregunta" />
+      <li>Cual es el organo mas importante del cuerpo humano?</li>
+      <input type="text" id="cuartaPregunta" />
+      <li>Cual fue el primer presidente de estados unidos?</li>
+      <input type="text" id="quintaPregunta" />
+    </ol>
+    <button onclick="enviarRespuestas()">Enviar</button>
+    <button onclick="reiniciarJuego()">Reiniciar</button>
+
+    <script>
+        let tiempoRestante = 30
+        let intervaloId;
+        let pantallaMensaje= document.getElementById("cuentaRegresivaReloj")
+        let audioCuentaRegresiva= document.getElementById("audioCuentaRegresiva")
+        function tiempoInicial(){
+            intervaloId=setInterval(actualizarReloj,1000);
+        }
+
+        function actualizarReloj(){
+            if(tiempoRestante === 0){
+              tiempoCumplido()
+              
+            }
+            else{
+              tiempoRestante-= 1
+              pantallaMensaje.textContent = tiempoRestante
+            }  
+        }
+
+        function tiempoCumplido(){
+            audioCuentaRegresiva.play()
+            pantallaMensaje.textContent= "Se acabado el tiempo";
+            clearInterval(intervaloId)
+        }
+
+        function enviarRespuestas(){
+          clearInterval(intervaloId)
+          pantallaMensaje.textContent = "Tus respuestas se han enviado"
+          let envioTiempo= new Date();
+          let fechaFormateado = envioTiempo.toLocaleDateString("es-ES");
+          let tiempoFormateado = envioTiempo.toLocaleTimeString("es-ES")
+          let primerRespuesta = document.getElementById("primeraPregunta").value;
+          let segundaPregunta = document.getElementById("segundaPregunta").value;
+          let terceraPregunta = document.getElementById("terceraPregunta").value;
+          let cuartaPregunta = document.getElementById("cuartaPregunta").value;
+          let quintaPregunta = document.getElementById("quintaPregunta").value;
+
+          alert("Fecha de envio: " + fechaFormateado + " \nHora de envio: " + tiempoFormateado + " \nLas respuestas suyas: " +  "\nRespuesta 1 "+ primerRespuesta + "\nRespuesta 2 "+ segundaPregunta + "\nRespuesta 3 "+ terceraPregunta + "\nRespuesta 4 "+ cuartaPregunta + "\nRespuesta  5 "+ quintaPregunta);
+        }
+
+        function reiniciarJuego(){
+            location.reload();
+        }
+
+       
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+.centrar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    color: #d4af37
+}
+
+img{
+    width: 500px;
+    height: 272.73px;
+}
+
+body{
+    background-color: #000000;
+    color: #ffffff; 
+}
+
+button {
+  background-color: #d4af37; /* dorado elegante */
+  color: #000000;            /* texto negro */
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}

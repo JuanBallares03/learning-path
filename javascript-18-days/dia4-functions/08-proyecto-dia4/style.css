@@ -1,0 +1,27 @@
+body{
+    background-color: #e0f7fa;
+}
+
+input{
+    width: 150px;   
+}
+
+.button1 button{
+    width: 72px;
+}
+
+.button2 button{
+    width: 148px;
+}
+
+.button3 button{
+    width: 97px;
+}
+
+#mostrarResultado{
+    width: 298px;
+}
+
+.centrar{
+    text-align: center;
+}

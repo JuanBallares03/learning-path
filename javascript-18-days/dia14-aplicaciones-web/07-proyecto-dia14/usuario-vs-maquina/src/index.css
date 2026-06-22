@@ -1,0 +1,27 @@
+body{
+ background-color: #1c1c1c;
+ margin: 0;
+}
+
+h1{
+  color: aliceblue;
+}
+
+
+.imagen-sombra{
+  width: 500px;
+  height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 10px 15px -3px,rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+}
+
+.centrado{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.usuario{
+  padding: 10px;
+}

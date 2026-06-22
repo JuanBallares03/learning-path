@@ -1,0 +1,36 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constructor</title>
+  </head>
+  <body>
+    <script>
+      function Gato(raza,edad) {
+        this.patas = 4;
+        this.raza = raza;
+        this.edad = edad;
+        this.maullear = function () {
+          console.log("miau");
+        };
+      }
+
+      let lucky = new Gato("Europeo",1);
+      let cloeh = new Gato("Europeo",4);
+      
+      function Empleado(nombre,apellido,edad,cargo){
+      
+        this.nombre = nombre;
+        this.apellido =apellido;
+        this.edad = edad;
+        this.cargo = cargo;
+
+        this.presentarse = function(){
+          console.log(`Mi nombre es ${this.nombre} ${this.apellido}, Mi cargo es ${this.cargo}, y tengo ${this.edad} años`);
+        };
+      };
+
+      
+    </script>
+  </body>
+</html>

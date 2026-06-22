@@ -1,0 +1,36 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Extraer informacion del JSONt</title>
+  </head>
+  <body>
+    <div id="nombre"></div>
+
+    <script>
+        //Esta manera solo sirve si el archivo JSON esta en el mismo lugar.
+        let datosJson
+        let xhr = new XMLHttpRequest();
+
+        //Una solicitud asincrona se envia en segundo plano mientras el codigo JS continua ejecutandose, Esto significa que la pagina no se va bloquear mientras que la solicitud se complete.
+        // Permite a la pagina realizar otras tareas mientras espera.
+
+        //Si lo marcamos sincrona significa que el codigo JS podria detenerse esperando la solicitud se complete antes de continuar ejecutarse
+        xhr.open('GET', "persona.json",true);
+        xhr.responseType = 'json';
+        xhr.onload = function(){
+            if(xhr.status ===200){
+                datosJson = xhr.response;
+                let elementoTexto = document.getElementById("nombre");
+                elementoTexto.textContent = datosJson.nombre;
+            }
+            else{
+                //Manejar el error
+            }
+
+            xhr.send();
+        }
+        
+    </script>
+  </body>
+</html>

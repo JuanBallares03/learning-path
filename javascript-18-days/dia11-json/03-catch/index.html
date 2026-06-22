@@ -1,0 +1,26 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metodo catch</title>
+  </head>
+  <body>
+    <div id="nombre"></div>
+
+    <script>
+      let datosJson;
+      // una promesa es una declaracion que se resuelve en el futuro
+      // parsear es convertir el archivo json en un objeto
+      fetch("persona.json")
+      .then((res) => res.json())
+      .then((salida) => {
+          datosJson = salida;
+
+          let elementoTexto = document.getElementById("nombre");
+          elementoTexto.textContent = datosJson.nombre;
+      })
+      .catch(function(error){alert(error)})  
+      
+    </script>
+  </body>
+</html>

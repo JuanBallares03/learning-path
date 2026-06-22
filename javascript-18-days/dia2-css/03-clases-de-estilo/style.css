@@ -1,0 +1,15 @@
+p{
+    text-align: center;
+}
+
+.comun{
+    color: blue;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.especial{
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aqua;
+    padding: 10px;
+}

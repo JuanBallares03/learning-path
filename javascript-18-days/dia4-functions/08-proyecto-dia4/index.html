@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+        <div class="centrar">
+          <h1>Calculadora cientifica</h1>
+          <input type="number" id="numeroUno" />
+          <input type="number" id="numeroDos" />
+          <br />
+          <div class="button1">
+              <button onclick="botonSuma()">+</button>
+              <button onclick="botonResta()">-</button>
+              <button onclick="botonMultiplicacion()">*</button>
+              <button onclick="botonDivision()">/</button>
+          </div>
+          <div class="button2 ">
+              <button onclick="botonPotencia()">potencia</button>
+              <button onclick="botonRaiz()">raiz</button>
+              <br />
+              <button onclick="botonAbsoluto()">absoluto</button>
+              <button onclick="botonRandom()">random</button>
+          </div>
+          <br />
+          <input type="text" id="mostrarResultado" readonly  />
+          <br />
+          <div class="button3">
+              <button onclick="botonRound()">round</button>
+              <button onclick="botonFloor()">floor</button>
+              <button onclick="botonCeil()">ceil</button>
+          </div>
+        </div>
+  </body>
+</html>

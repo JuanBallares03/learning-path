@@ -1,0 +1,15 @@
+{
+    "nombre":"Camilo Ballares",
+    "edad":21,
+    "esEstudiante": true,
+    "direccion":{
+        "calle":"Calle 20C",
+        "ciudad":"Medellin"
+    },
+    "telefonos":[
+        "1234567",
+        "123456789"
+    ],
+    "QueEsJSON":"JSON es un formato de texto ligero que permite intercambiar informacion entre sistemas, con la estructura de clave:valor"
+}
+
